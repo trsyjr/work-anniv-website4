@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Work Anniversary</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="overflow-y-auto min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 font-[Poppins]">
+
+  <!-- FIXED BACK BUTTON -->
+  <button id="backBtn"
+    onclick="goBack()"
+    class="hidden fixed top-6 left-6 z-50 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-full shadow-xl flex items-center gap-2 animate-pulse-soft transition-all">
+    ← Back
+  </button>
+
+  <!-- BALLOONS -->
+  <div class="pointer-events-none fixed inset-0 overflow-hidden">
+    <div class="balloon bg-blue-300 left-[10%]"></div>
+    <div class="balloon bg-blue-400 left-[30%]" style="animation-delay:2s"></div>
+    <div class="balloon bg-blue-500 left-[50%]" style="animation-delay:4s"></div>
+    <div class="balloon bg-blue-300 left-[70%]" style="animation-delay:1s"></div>
+    <div class="balloon bg-blue-400 left-[85%]" style="animation-delay:3s"></div>
+  </div>
+
+  <!-- LANDING -->
+  <section id="landing" class="relative z-10 min-h-screen flex items-center justify-center text-center px-6">
+    <div class="max-w-5xl text-white fade-slide">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
+        Happy 2nd Work Anniversary,<br>
+        Mr. Aljohn C. Purca
+      </h1>
+      <p class="text-lg md:text-xl text-blue-100 mb-10">
+        A celebration of dedication, passion, and excellence at work.
+      </p>
+
+      <button onclick="revealCelebrants()"
+        class="bg-blue-600 text-white hover:bg-blue-700 px-10 py-4 rounded-full font-semibold text-lg shadow-xl transition-all duration-300 hover:scale-110">
+        Celebrate with him
+      </button>
+    </div>
+  </section>
+
+  <!-- CELEBRANT CARD -->
+  <section id="celebrants" class="hidden relative z-10 px-6 py-16">
+    <div class="max-w-4xl mx-auto fade-slide">
+      <div class="bg-blue-50 rounded-3xl shadow-2xl p-12 md:p-16 text-center">
+        <img src="Assets/Aljohn4.jpeg"
+          class="mx-auto w-56 h-56 md:w-72 md:h-72 rounded-full object-cover ring-[8px] ring-blue-600 shadow-xl hover:scale-105 transition-transform">
+
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mt-6">
+          Mr. Aljohn C. Purca
+        </h2>
+
+        <p class="text-gray-600 mt-2">
+          Celebrating his <span class="font-bold text-blue-700">2nd work anniversary</span>
+        </p>
+
+        <p class="text-gray-700 mt-6">
+          Your enthusiasm, leadership, and unwavering dedication make a difference every day.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPRECIATION -->
+  <section id="appreciation-cla" class="hidden relative z-10 px-6 py-16">
+    <div class="max-w-4xl mx-auto fade-slide">
+      <div class="bg-blue-50 rounded-3xl shadow-2xl p-12 md:p-16">
+        <h3 class="text-3xl md:text-5xl font-bold text-blue-800 mb-8 text-center">
+          Happy 2nd Work Anniversary, Sir Aljohn!
+        </h3>
+
+        <div class="text-gray-700 space-y-4 text-lg">
+          <p>We celebrate two wonderful years of dedication and service.</p>
+          <p>Your mastery of data analytics and Excel brings clarity and efficiency to the team.</p>
+          <p>Thank you for helping our division work smarter every day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING IMAGES -->
+  <section id="floating-images" class="hidden relative z-10 h-[120vh] overflow-hidden">
+    <h2 class="absolute inset-0 flex justify-center items-center text-4xl md:text-6xl font-bold text-white text-center drop-shadow-xl pointer-events-none">
+      Happy 2nd Work Anniversary.
+    </h2>
+  </section>
+
+  <audio id="bg-music" src="Assets/Celeb.mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
