@@ -3,11 +3,15 @@ function revealCelebrants() {
   const celebrants = document.getElementById('celebrants');
   const appreciationCla = document.getElementById('appreciation-cla');
   const floating = document.getElementById('floating-images');
+  const backBtn = document.getElementById('backBtn');
 
   landing.classList.add('hidden');
   celebrants.classList.remove('hidden');
   appreciationCla.classList.remove('hidden');
   floating.classList.remove('hidden');
+
+  // ✅ Show the back button when celebrating
+  backBtn.classList.remove('hidden');
 
   const music = document.getElementById('bg-music');
   music.play();
@@ -15,6 +19,25 @@ function revealCelebrants() {
   launchConfetti();
   showFloatingImagesTurn();
   spawnBalloons(15);
+}
+
+/* ================= BACK BUTTON ================= */
+function goBack() {
+  const landing = document.getElementById('landing');
+  const celebrants = document.getElementById('celebrants');
+  const appreciationCla = document.getElementById('appreciation-cla');
+  const floating = document.getElementById('floating-images');
+  const backBtn = document.getElementById('backBtn');
+
+  landing.classList.remove('hidden');
+  celebrants.classList.add('hidden');
+  appreciationCla.classList.add('hidden');
+  floating.classList.add('hidden');
+
+  // Hide back button when returning
+  backBtn.classList.add('hidden');
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 /* ================= CONFETTI ================= */
@@ -70,7 +93,8 @@ function spawnBalloons(quantity = 5) {
 
 /* ================= CLA IMAGES ================= */
 const claImages = [
-  "Assets/Aljohn1.jpeg","Assets/Aljohn2.jpeg","Assets/Aljohn3.jpeg","Assets/Aljohn4.jpeg"
+  "Assets/Aljohn1.jpeg","Assets/Aljohn2.jpeg","Assets/Aljohn3.jpeg","Assets/Aljohn4.jpeg",
+  "Assets/Aljohn5.jpeg","Assets/Aljohn6.jpeg"
 ];
 
 /* ================= SHUFFLE ================= */
