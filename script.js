@@ -94,7 +94,9 @@ function spawnBalloons(quantity = 5) {
 /* ================= CLA IMAGES ================= */
 const claImages = [
   "Assets/Aljohn1.jpeg","Assets/Aljohn2.jpeg","Assets/Aljohn3.jpeg","Assets/Aljohn4.jpeg",
-  "Assets/Aljohn5.jpeg","Assets/Aljohn6.jpeg"
+  "Assets/Aljohn5.jpeg","Assets/Aljohn6.jpeg","Assets/Aljohn7.png","Assets/Aljohn8.png",
+  "Assets/Aljohn9.png","Assets/Aljohn9.png","Assets/Aljohn10.png","Assets/Aljohn11.png",
+  "Assets/Aljohn12.png","Assets/Aljohn13.png"
 ];
 
 /* ================= SHUFFLE ================= */
